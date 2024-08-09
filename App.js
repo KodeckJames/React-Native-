@@ -1,5 +1,5 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Dimensions, StyleSheet, Text, View } from 'react-native'
+import React, { useEffect, useState } from 'react'
 import ReusableBox from './ReusableBox'
 import DynamicUI from './DynamicUI'
 ReusableBox
@@ -9,7 +9,7 @@ export default function App() {
     <View style={styles.container}>
       <DynamicUI />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
-        Box 1
+        Box 1s
       </ReusableBox>
       <ReusableBox style={{ backgroundColor: 'orange' }}>Box 2</ReusableBox>
       <ReusableBox style={{ backgroundColor: 'plum' }}>Box 3</ReusableBox>
