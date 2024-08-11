@@ -1,21 +1,8 @@
-import { StyleSheet, Text, View, Dimensions } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import { StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 
 export default function DynamicUI() {
-  const [dimensions, setDimensions] = useState({
-    window: Dimensions.get('window'),
-  })
-
-  useEffect(() => {
-    const subscription = Dimensions.addEventListener('change', ({ window }) => {
-      setDimensions({ window })
-    })
-    return () => subscription?.remove()
-  })
-
-  const { window } = dimensions
-  const windowWidth = window.width
-  const windowHeight = window.height
+  const windowWidth = useWindowDimensions().width
+  const windowHeight = useWindowDimensions().height
 
   return (
     <View style={styles.container}>
@@ -71,3 +58,4 @@ const styles = StyleSheet.create({
 // How to set:
 // width: windowWidth > 500 ? "70%" : "90%"=>  it windowWidth is grater than 500, set width to 70% else set to 90%
 // To change the orientation ie portrait or default, go to the app.json file...Default mode allows switching to landscape
+// Use the useWindowDimensions API to achieve rotation and apply the code as above

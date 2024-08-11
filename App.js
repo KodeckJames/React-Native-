@@ -1,13 +1,13 @@
-import { Dimensions, StyleSheet, Text, View } from 'react-native'
+import { Dimensions, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import ReusableBox from './ReusableBox'
-import DynamicUI from './DynamicUI'
+import SafeAreaViewComp from './SafeAreaViewComp'
 ReusableBox
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <DynamicUI />
+      <SafeAreaViewComp />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
         Box 1s
       </ReusableBox>
