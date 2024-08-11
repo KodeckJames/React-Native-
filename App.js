@@ -2,12 +2,13 @@ import { Dimensions, SafeAreaView, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import ReusableBox from './ReusableBox'
 import SafeAreaViewComp from './SafeAreaViewComp'
+import PlatformSpec from './PlatformSpec'
 ReusableBox
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SafeAreaViewComp />
+      <PlatformSpec />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
         Box 1s
       </ReusableBox>
