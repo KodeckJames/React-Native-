@@ -3,12 +3,14 @@ import React, { useEffect, useState } from 'react'
 import ReusableBox from './ReusableBox'
 import SafeAreaViewComp from './SafeAreaViewComp'
 import PlatformSpec from './PlatformSpec'
+import Lists from './Lists'
+import FlatList from './FlatList'
 ReusableBox
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <PlatformSpec />
+      <FlatList />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
         Box 1s
       </ReusableBox>
