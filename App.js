@@ -13,12 +13,13 @@ import PlatformSpec from './PlatformSpec'
 import Lists from './Lists'
 import FlatList from './FlatList'
 import SectionLists from './SectionList'
+import TextInput from './TextInput'
 ReusableBox
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SectionLists />
+      <TextInput />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
         Box 1s
       </ReusableBox>
