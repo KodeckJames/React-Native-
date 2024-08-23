@@ -23,6 +23,11 @@ export default function Textinput() {
         autoCapitalize="words"
       />
       <Text style={styles.text}>My name is {name}</Text>
+      <TextInput
+        style={[styles.input, styles.multiLineText]}
+        multiLine
+        placeholder="message"
+      />
     </SafeAreaView>
   )
 }
@@ -43,6 +48,10 @@ const styles = StyleSheet.create({
     fontSize: 30,
     padding: 10,
   },
+  multiLineText: {
+    minHeight: 100,
+    textAlignVertical: 'top',
+  },
 })
 // It allows users to enter text and other data into your app
 // Props:
@@ -53,3 +62,4 @@ const styles = StyleSheet.create({
 // keyboardType="ascii-capable, decimal-pad, default, email-address, name-phone-pad, number-pad, numbers-and-punctuation, numeric, phone-pad, twitter, url, visible-password"
 // autoCorrect={true, false}
 // autoCapitalize="characters, none, sentences, words"
+// multiLine =>Alows multiple lines
