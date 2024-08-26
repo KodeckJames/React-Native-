@@ -5,15 +5,34 @@ import {
   View,
   TextInput,
   Button,
+  Image,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native'
 import React, { useState } from 'react'
 
 export default function Login() {
   const [UserName, setUserName] = useState('')
   const [Password, setPassword] = useState('')
+  const [errors, setErrors] = useState({})
+  const validateForm = () => {
+    let errors = {}
+    if (!UserName) errors.UserName = 'Username is required'
+    if (!Password) errors.Password = 'Password is required'
+    setErrors(errors)
+    return Object.keys(errors).length === 0
+  }
   return (
-    <View style={styles.container}>
+    <KeyboardAvoidingView
+      behavior="padding"
+      keyboardVerticalOffset={Platform.OS === 'ios' ? 100 : 0}
+      style={styles.container}
+    >
       <View style={styles.form}>
+        <Image
+          source={require('./assets/adaptive-icon.png')}
+          style={styles.image}
+        />
         <Text style={styles.label}>Username</Text>
         <TextInput
           placeholder="Enter your Username"
@@ -31,7 +50,7 @@ export default function Login() {
         />
         <Button title="Login" onPress={() => console.log('Logged In')} />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   )
 }
 
@@ -69,4 +88,11 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
   },
+  image: {
+    width: 200,
+    height: 200,
+    alignSelf: 'center',
+    marginBottom: 50,
+  },
 })
+// Use the KeyboardAvoidingView component to prevent the keyboard from overlaping the content above it...
