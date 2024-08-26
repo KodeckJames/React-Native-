@@ -40,6 +40,9 @@ export default function Login() {
           value={UserName}
           onChangeText={setUserName}
         />
+        {errors.UserName ? (
+          <Text style={styles.errorText}>{errors.UserName}</Text>
+        ) : null}
         <Text style={styles.label}>Password</Text>
         <TextInput
           style={styles.input}
@@ -48,6 +51,9 @@ export default function Login() {
           value={Password}
           onChangeText={setPassword}
         />
+        {errors.Password ? (
+          <Text style={styles.errorText}>{errors.UserName}</Text>
+        ) : null}
         <Button title="Login" onPress={() => console.log('Logged In')} />
       </View>
     </KeyboardAvoidingView>
@@ -93,6 +99,10 @@ const styles = StyleSheet.create({
     height: 200,
     alignSelf: 'center',
     marginBottom: 50,
+  },
+  errorText: {
+    color: 'red',
+    marginBottom: 10,
   },
 })
 // Use the KeyboardAvoidingView component to prevent the keyboard from overlaping the content above it...
