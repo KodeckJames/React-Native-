@@ -17,12 +17,13 @@ import TextInput from './TextInput'
 import Switch from './Switch'
 import Login from './Login'
 import Networking from './Networking'
+import Navigation from './Navigation'
 ReusableBox
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Networking />
+      <Navigation />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
         Box 1s
       </ReusableBox>
