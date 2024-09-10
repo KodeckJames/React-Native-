@@ -1,11 +1,10 @@
 import { StyleSheet, Text, View, StatusBar } from 'react-native'
 import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
 
 export default function Navigation() {
   return (
-    <View style={styles.container}>
-      <Text>Navigation</Text>
-    </View>
+    <NavigationContainer>{/* Rest of your app code */}</NavigationContainer>
   )
 }
 
