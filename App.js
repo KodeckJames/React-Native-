@@ -1,3 +1,4 @@
+import { AppRegistry } from 'react-native'
 import {
   Dimensions,
   SafeAreaView,
@@ -18,7 +19,7 @@ import Switch from './Switch'
 import Login from './Login'
 import Networking from './Networking'
 import Navigation from './Navigation'
-ReusableBox
+// ReusableBox
 
 export default function App() {
   return (
