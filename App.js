@@ -19,12 +19,13 @@ import Switch from './Switch'
 import Login from './Login'
 import Networking from './Networking'
 import Navigation from './Navigation'
+import DrawerNavigation from './DrawerNavigation'
 // ReusableBox
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Navigation />
+      <DrawerNavigation />
       {/* <ReusableBox style={{ backgroundColor: 'brown', top: 75, left: 75 }}>
         Box 1s
       </ReusableBox>
