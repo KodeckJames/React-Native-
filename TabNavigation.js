@@ -19,6 +19,9 @@ export default function TabNavigation() {
           tabBarShowLabel: true,
           tabBarActiveTintColor: 'purple',
           tabBarInactiveTintColor: 'orange',
+          tabBarStyle: {
+            backgroundColor: 'yellow',
+          },
         }}
       >
         <Tab.Screen name="Course List" component={CourseListScreen} />
